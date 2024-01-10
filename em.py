@@ -51,7 +51,7 @@ y.columns = ["Targets"]
 plt.figure(figsize=(14, 7))
 
 # Create a colormap
-colormap = np.array(["red", "lime", "black"])
+colormap = np.array(["red", "lime", "blue"])
 
 # Plot Sepal
 plt.subplot(1, 2, 1)
@@ -106,7 +106,7 @@ from sklearn.mixture import GaussianMixture
 
 gmm = GaussianMixture(n_components=3)
 gmm.fit(xs)
-
+        
 y_cluster_gmm = gmm.predict(xs)
 
 plt.subplot(1, 2, 1)
@@ -118,3 +118,5 @@ em = rename(y_cluster_gmm)
 print("\nWhat EM thought: \n", em)
 print("Accuracy of EM is ", sm.accuracy_score(y, em))
 print("Confusion Matrix for EM is \n", sm.confusion_matrix(y, em))
+
+

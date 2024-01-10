@@ -11,6 +11,7 @@ def domain():
     return D
 
 
+
 D = domain()
 
 
